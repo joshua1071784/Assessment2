@@ -42,7 +42,7 @@ public class ReceiptFragment extends Fragment {
     private static final int REQUEST_CONTACT = 1;
     private static final int REQUEST_PHOTO= 2;
 
-    private Receipt mReceipt;
+    private com.bignerdranch.android.receipttracker.Receipt mReceipt;
     private File mPhotoFile;
     private EditText mTitleField;
     private EditText mShop;
@@ -60,7 +60,7 @@ public class ReceiptFragment extends Fragment {
      * requiredinterface for hosting activities
      */
     public interface Callbacks {
-        void onReceiptUpdated(Receipt receipt);
+        void onReceiptUpdated(com.bignerdranch.android.receipttracker.Receipt receipt);
     }
 
     public static ReceiptFragment newInstance(UUID ReceiptId) {
@@ -85,8 +85,8 @@ public class ReceiptFragment extends Fragment {
         setHasOptionsMenu(true);
         UUID receiptId = (UUID) getArguments().getSerializable(ARG_RECEIPT_ID);
 
-        mReceipt = ReceiptLab.get(getActivity()).getReceipt(receiptId);
-        mPhotoFile = ReceiptLab.get(getActivity()).getPhotoFile(mReceipt);
+        mReceipt = com.bignerdranch.android.receipttracker.ReceiptLab.get(getActivity()).getReceipt(receiptId);
+        mPhotoFile = com.bignerdranch.android.receipttracker.ReceiptLab.get(getActivity()).getPhotoFile(mReceipt);
 
 
     }
@@ -98,7 +98,7 @@ public class ReceiptFragment extends Fragment {
     public void onPause() {
         super.onPause();
 
-        ReceiptLab.get(getActivity())
+        com.bignerdranch.android.receipttracker.ReceiptLab.get(getActivity())
                 .updateReceipt(mReceipt);
         }
 
@@ -277,7 +277,7 @@ public class ReceiptFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.delete_button:
-                ReceiptLab.get(getActivity()).deleteReceipt(mReceipt);
+                com.bignerdranch.android.receipttracker.ReceiptLab.get(getActivity()).deleteReceipt(mReceipt);
                 getActivity().finish();
                 return true;
             default:
@@ -292,7 +292,7 @@ public class ReceiptFragment extends Fragment {
         }
         if (requestCode == REQUEST_DATE) {
             Date date = (Date) data
-                    .getSerializableExtra(DatePickerFragment.EXTRA_DATE);
+                    .getSerializableExtra(com.bignerdranch.android.receipttracker.DatePickerFragment.EXTRA_DATE);
             mReceipt.setDate(date);
             updateReceipt();
             updateDate();
@@ -332,7 +332,7 @@ public class ReceiptFragment extends Fragment {
     }
 
     private void updateReceipt() {
-        ReceiptLab.get(getActivity()).updateReceipt(mReceipt);
+        com.bignerdranch.android.receipttracker.ReceiptLab.get(getActivity()).updateReceipt(mReceipt);
         mCallbacks.onReceiptUpdated(mReceipt);
 
     }
