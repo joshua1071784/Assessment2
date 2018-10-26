@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include
+    layout="@layout/view_camera_and_title">
+    </include>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/receipt_details_label"
+        style="?android:listSeparatorTextViewStyle"
+        />
+    <EditText
+        android:id="@+id/shop_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:hint="@string/shop_name_hint">
+    </EditText>
+    <EditText
+        android:id="@+id/shop_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:hint="@string/comments_hint">
+    </EditText>
+
+    <Button android:id="@+id/receipt_date"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        />
+    <CheckBox android:id="@+id/receipt_solved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/receipt_solved_label"
+        />
+    <Button
+        android:id="@+id/receipt_suspect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/receipt_suspect_text"
+        />
+    <Button
+        android:id="@+id/receipt_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/receipt_report_text"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/maps_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/map_location"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="2"
+            >
+        </TextView>
+
+        <Button
+            android:id="@+id/maps_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/map_text"
+            >
+        </Button>
+
+    </LinearLayout>
+</LinearLayout>
