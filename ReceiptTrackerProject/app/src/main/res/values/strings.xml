@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Receipt Tracker</string>
+    <string name="receipt_title_hint">Enter a title for the receipt.</string>
+    <string name="shop_name_hint">Enter the name of the shop.</string>
+    <string name="comments_hint">Enter any comments here.</string>
+    <string name="receipt_title_label">Title</string>
+    <string name="receipt_details_label">Details</string>
+    <string name="receipt_solved_label">Receipt has been Field</string>
+    <string name="date_picker_title">Date of receipt:</string>
+    <string name="new_receipt">New Receipt</string>
+    <string name="show_subtitle">Help</string>
+    <string name="hide_subtitle">Hide Subtitle</string>
+    <string name="subtitle_format">%1$s receipts</string>
+    <string name="receipt_suspect_text">Choose Suspect</string>
+    <string name="receipt_report_text">Send Receipt Report</string>
+    <string name="delete_receipt">Delete Receipt</string>
+    <string name="map_text">Show Map</string>
+    <string name="map_location">Lat; 0001, Lon; 0001</string>
+
+    <string name="receipt_report">%1$s!    The receipt was discovered on %2$s. %3$s, and %4$s  </string>
+    <string name="receipt_report_solved">The case is filed</string>
+    <string name="receipt_report_unsolved">The case is not filed</string>
+    <string name="receipt_report_no_suspect">there is no suspect.</string>
+    <string name="receipt_report_suspect">the suspect is %s.</string>
+    <string name="receipt_report_subject">ReceiptTracker Receipt Report</string>
+    <string name="send_report">Send receipt report via</string>
+</resources>
